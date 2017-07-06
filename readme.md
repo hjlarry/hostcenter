@@ -23,18 +23,21 @@
 
 Clone first :
 
-```shell
+``
 git clone https://github.com/hjlarry/hostcenter.git
-```
+``
     
 
 To run the laravel server :
 
-```shell
+```bash
 cd hostcenter
+
 composer install
+
 //edit config
 cp .env.example .env 
+
 php artisan migrate
 ```
     
