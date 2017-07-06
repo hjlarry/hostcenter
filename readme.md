@@ -23,19 +23,31 @@
 
 Clone first :
 
-    git clone https://github.com/hjlarry/hostcenter.git
+```shell
+git clone https://github.com/hjlarry/hostcenter.git
+```
+    
 
 To run the laravel server :
 
-    cd hostcenter
-    composer install
-    cp .env.example .env //edit config
-    php artisan migrate
+```shell
+cd hostcenter
+composer install
+//edit config
+cp .env.example .env 
+php artisan migrate
+```
+    
     
 To build the clients :
 
-    cd electron
-    npm install
-    cd src/renderer/axios.js  //edit server url
-    npm run dev  //or npm run build
+```shell
+cd electron
+npm install
+//edit server url
+cd src/renderer/axios.js  
+//or npm run build
+npm run dev  
+```
+    
 
