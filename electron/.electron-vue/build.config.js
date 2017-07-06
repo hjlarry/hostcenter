@@ -8,6 +8,15 @@ const path = require('path')
     entitlements:path.join(__dirname, '../build/parent.plist'),
     'entitlements-inherit':path.join(__dirname, '../build/child.plist')
   }
+ appBundleId:'com.lessney.iHost',
+ buildVersion:'20170627001',
+ extendInfo:{
+    ElectronTeamID:'QN839WA57K',
+    ITSAppUsesNonExemptEncryption:false,
+    NSAppTransportSecurity:{
+      NSAllowsArbitraryLoads:true
+    }
+  }
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-electron-packager.html
  */
 module.exports = {
@@ -18,14 +27,5 @@ module.exports = {
   ignore: /(^\/(src|test|\.[a-z]+|README|yarn|static|dist\/web))|\.gitkeep/,
   out: path.join(__dirname, '../build'),
   overwrite: true,
-  platform: process.env.BUILD_TARGET || 'all',
-  appBundleId:'com.lessney.iHost',
-  buildVersion:'20170627001',
-  extendInfo:{
-    ElectronTeamID:'QN839WA57K',
-    ITSAppUsesNonExemptEncryption:false,
-    NSAppTransportSecurity:{
-      NSAllowsArbitraryLoads:true
-    }
-  }
+  platform: process.env.BUILD_TARGET || 'all'
 }

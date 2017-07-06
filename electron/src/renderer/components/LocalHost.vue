@@ -5,7 +5,7 @@
                 <!--<div contenteditable="true" class="hostcontent">-->
                     <!--{{localhost}}-->
                 <!--</div>-->
-                <textarea name="" id="" cols="30" rows="23" class="form-control" v-model="localhost"></textarea>
+                <textarea name="" id="" cols="30" rows="22" class="form-control" v-model="localhost"></textarea>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary pull-right" @click="writeFile">Save</button>

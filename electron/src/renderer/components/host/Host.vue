@@ -12,7 +12,7 @@
                 </span>
             </span>
         </div>
-        <host-content-dialog v-if="show" @close="toggleShowContent()" :id="host.id"></host-content-dialog>
+        <host-content-dialog v-if="isshow" @close="toggleShowContent()" :id="host.id"></host-content-dialog>
     </div>
 </template>
 <script>
@@ -21,7 +21,7 @@
     props:['host','index','view','editable'],
     data(){
       return{
-        show:false,
+        isshow:false,
         checked:''
       }
     },
@@ -30,21 +30,16 @@
     },
     methods:{
       toHostContent(id){
-        if (this.disable == null){
           this.$router.push({
             path: '/hosts/'+id
-          })
-        }
+        })
       },
-
       del(host,index){
         host.index = index
-        if (this.disable == null){
-            this.$store.dispatch('delHost',host)
-        }
+        this.$store.dispatch('delHost',host)
       },
       toggleShowContent(){
-        this.show = !this.show
+        this.isshow = !this.isshow
       },
       check(){
         this.$emit('check',this.host.id)

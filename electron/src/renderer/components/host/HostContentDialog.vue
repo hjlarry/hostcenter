@@ -46,7 +46,7 @@
 
     }
 </script>
-<style>
+<style scoped>
     .modal{
         display: block;
     }

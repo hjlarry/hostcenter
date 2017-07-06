@@ -56,8 +56,8 @@ const actions = {
   // },
   createHost(store,host){
     Vue.axios.post('hosts',{
-      title:host[0].title,
-      hostcontent:host[1].content
+      title:host[1].title,
+      hostcontent:host[2].content
     }).then(response =>{
       console.log(response.data)
     })

@@ -49,14 +49,14 @@
       },
       methods:{
         submit(){
-          if (this.host.id !== null){
-            this.$store.dispatch('editHost',this.host)
-          }else {
+          if (this.$route.path == '/newhost'){
             this.$store.dispatch('createHost',this.host)
+          }else {
+            this.$store.dispatch('editHost',this.host)
           }
 
           this.$router.push({
-            path: '/hosts/'
+            path: '/myhost'
           })
         },
         add(){
