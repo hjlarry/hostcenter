@@ -30,7 +30,7 @@ git clone https://github.com/hjlarry/hostcenter.git
 
 To run the laravel server :
 
-```bash
+```
 cd hostcenter
 
 composer install
@@ -44,11 +44,14 @@ php artisan migrate
     
 To build the clients :
 
-```shell
+```
 cd electron
+
 npm install
+
 //edit server url
-cd src/renderer/axios.js  
+cd src/renderer/axios.js 
+ 
 //or npm run build
 npm run dev  
 ```
